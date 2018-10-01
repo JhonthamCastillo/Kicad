@@ -1,0 +1,254 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_ATmega:ATmega328P-AU U1
+U 1 1 5BB18966
+P 4750 3850
+F 0 "U1" H 4750 2264 50  0000 C CNN
+F 1 "ATmega328P-AU" H 4750 2173 50  0000 C CNN
+F 2 "Package_QFP:TQFP-32_7x7mm_P0.8mm" H 4750 3850 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 4750 3850 50  0001 C CNN
+	1    4750 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5BB18A03
+P 4750 5900
+F 0 "#PWR0101" H 4750 5650 50  0001 C CNN
+F 1 "GND" H 4755 5727 50  0000 C CNN
+F 2 "" H 4750 5900 50  0001 C CNN
+F 3 "" H 4750 5900 50  0001 C CNN
+	1    4750 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 5350 4750 5900
+$Comp
+L power:+5V #PWR0102
+U 1 1 5BB18C09
+P 4750 2100
+F 0 "#PWR0102" H 4750 1950 50  0001 C CNN
+F 1 "+5V" H 4765 2273 50  0000 C CNN
+F 2 "" H 4750 2100 50  0001 C CNN
+F 3 "" H 4750 2100 50  0001 C CNN
+	1    4750 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 2350 4750 2100
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5BB18C94
+P 6200 4150
+F 0 "SW1" H 6200 4435 50  0000 C CNN
+F 1 "SW_Push" H 6200 4344 50  0000 C CNN
+F 2 "Button_Switch_THT:Push_E-Switch_KS01Q01" H 6200 4350 50  0001 C CNN
+F 3 "" H 6200 4350 50  0001 C CNN
+	1    6200 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5BB18D33
+P 6550 4400
+F 0 "#PWR0103" H 6550 4150 50  0001 C CNN
+F 1 "GND" H 6555 4227 50  0000 C CNN
+F 2 "" H 6550 4400 50  0001 C CNN
+F 3 "" H 6550 4400 50  0001 C CNN
+	1    6550 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5BB18D69
+P 5750 3950
+F 0 "R1" H 5820 3996 50  0000 L CNN
+F 1 "R" H 5820 3905 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 5680 3950 50  0001 C CNN
+F 3 "~" H 5750 3950 50  0001 C CNN
+	1    5750 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0104
+U 1 1 5BB18E3F
+P 5750 3500
+F 0 "#PWR0104" H 5750 3350 50  0001 C CNN
+F 1 "+5V" V 5765 3628 50  0000 L CNN
+F 2 "" H 5750 3500 50  0001 C CNN
+F 3 "" H 5750 3500 50  0001 C CNN
+	1    5750 3500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5750 3500 5750 3800
+Wire Wire Line
+	5750 4100 5750 4150
+Wire Wire Line
+	5750 4150 6000 4150
+Wire Wire Line
+	5350 4150 5750 4150
+Connection ~ 5750 4150
+Wire Wire Line
+	6400 4150 6550 4150
+Wire Wire Line
+	6550 4150 6550 4400
+NoConn ~ 5350 5050
+NoConn ~ 5350 4950
+NoConn ~ 5350 4850
+NoConn ~ 5350 4750
+NoConn ~ 5350 4650
+NoConn ~ 5350 4550
+NoConn ~ 5350 4450
+NoConn ~ 5350 4350
+NoConn ~ 5350 4050
+NoConn ~ 5350 3950
+NoConn ~ 5350 3850
+NoConn ~ 5350 3750
+NoConn ~ 5350 3650
+NoConn ~ 5350 3550
+NoConn ~ 5350 3050
+NoConn ~ 5350 2950
+NoConn ~ 5350 2850
+NoConn ~ 5350 2750
+NoConn ~ 5350 2650
+NoConn ~ 4150 2650
+NoConn ~ 4150 2850
+NoConn ~ 4150 2950
+NoConn ~ 8100 3350
+$Comp
+L Connector:Conn_01x02_Female J1
+U 1 1 5BB193DD
+P 7750 3900
+F 0 "J1" H 7777 3876 50  0000 L CNN
+F 1 "Conn_01x02_Female" H 7777 3785 50  0000 L CNN
+F 2 "Connector_Hirose:Hirose_DF13-02P-1.25DS_1x02_P1.25mm_Horizontal" H 7750 3900 50  0001 C CNN
+F 3 "~" H 7750 3900 50  0001 C CNN
+	1    7750 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5BB194A2
+P 7400 4300
+F 0 "#PWR02" H 7400 4050 50  0001 C CNN
+F 1 "GND" H 7405 4127 50  0000 C CNN
+F 2 "" H 7400 4300 50  0001 C CNN
+F 3 "" H 7400 4300 50  0001 C CNN
+	1    7400 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR01
+U 1 1 5BB194F6
+P 7400 3650
+F 0 "#PWR01" H 7400 3500 50  0001 C CNN
+F 1 "+5V" H 7415 3823 50  0000 C CNN
+F 2 "" H 7400 3650 50  0001 C CNN
+F 3 "" H 7400 3650 50  0001 C CNN
+	1    7400 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 3650 7400 3900
+Wire Wire Line
+	7400 3900 7550 3900
+Wire Wire Line
+	7550 4000 7400 4000
+Wire Wire Line
+	7400 4000 7400 4300
+$Comp
+L Device:Crystal Y1
+U 1 1 5BB199C3
+P 6100 3100
+F 0 "Y1" V 6054 3231 50  0000 L CNN
+F 1 "Crystal" V 6145 3231 50  0000 L CNN
+F 2 "Crystal:Crystal_HC52-8mm_Vertical" H 6100 3100 50  0001 C CNN
+F 3 "~" H 6100 3100 50  0001 C CNN
+	1    6100 3100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5350 3350 5650 3350
+Wire Wire Line
+	5650 3350 5650 3250
+Wire Wire Line
+	5650 3250 6100 3250
+Wire Wire Line
+	6100 2950 5600 2950
+Wire Wire Line
+	5600 2950 5600 3250
+Wire Wire Line
+	5600 3250 5350 3250
+NoConn ~ 5350 3150
+$Comp
+L Device:C C1
+U 1 1 5BB19F93
+P 6650 2800
+F 0 "C1" V 6398 2800 50  0000 C CNN
+F 1 "C" V 6489 2800 50  0000 C CNN
+F 2 "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 6688 2650 50  0001 C CNN
+F 3 "~" H 6650 2800 50  0001 C CNN
+	1    6650 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5BB1A044
+P 6650 3400
+F 0 "C2" V 6398 3400 50  0000 C CNN
+F 1 "C" V 6489 3400 50  0000 C CNN
+F 2 "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 6688 3250 50  0001 C CNN
+F 3 "~" H 6650 3400 50  0001 C CNN
+	1    6650 3400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6500 2800 6100 2800
+Wire Wire Line
+	6100 2800 6100 2950
+Connection ~ 6100 2950
+Wire Wire Line
+	6100 3250 6100 3400
+Wire Wire Line
+	6100 3400 6500 3400
+Connection ~ 6100 3250
+Wire Wire Line
+	6800 2800 6950 2800
+Wire Wire Line
+	6950 2800 6950 3100
+Wire Wire Line
+	6950 3400 6800 3400
+$Comp
+L power:GND #PWR03
+U 1 1 5BB1AB23
+P 7100 3150
+F 0 "#PWR03" H 7100 2900 50  0001 C CNN
+F 1 "GND" H 7105 2977 50  0000 C CNN
+F 2 "" H 7100 3150 50  0001 C CNN
+F 3 "" H 7100 3150 50  0001 C CNN
+	1    7100 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 3100 7100 3100
+Wire Wire Line
+	7100 3100 7100 3150
+Connection ~ 6950 3100
+Wire Wire Line
+	6950 3100 6950 3400
+$EndSCHEMATC

@@ -1,0 +1,147 @@
+
+(session prueba.ses
+  (base_design prueba.dsn)
+  (placement
+    (resolution um 10)
+    (component Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal
+      (place R1 1498600 -990600 front 0)
+    )
+    (component Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm
+      (place C2 1435100 -1117600 front 180)
+    )
+    (component Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal::1
+      (place R2 1549400 -1016000 front 270)
+    )
+    (component Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm::1
+      (place C1 1498600 -1079500 front 270)
+    )
+    (component "Package_DIP:DIP-8_W7.62mm"
+      (place U1 1384300 -990600 front 0)
+    )
+  )
+  (was_is
+  )
+  (routes 
+    (resolution um 10)
+    (parser
+      (host_cad "KiCad's Pcbnew")
+      (host_version "(5.0.0)")
+    )
+    (library_out 
+      (padstack "Via[0-1]_2000:400_um"
+        (shape
+          (circle F.Cu 20000 0 0)
+        )
+        (shape
+          (circle B.Cu 20000 0 0)
+        )
+        (attach off)
+      )
+    )
+    (network_out 
+      (net GND
+        (wire
+          (path F.Cu 10000
+            1498600 -1104500
+            1496470 -1102370
+            1425330 -1102370
+            1410100 -1117600
+          )
+        )
+        (wire
+          (path B.Cu 10000
+            1384300 -990600
+            1369072 -1005828
+            1369072 -1076572
+            1410100 -1117600
+          )
+        )
+      )
+      (net "Net-(C1-Pad1)"
+        (wire
+          (path F.Cu 10000
+            1460500 -1066800
+            1485900 -1066800
+            1498600 -1079500
+          )
+        )
+      )
+      (net "Net-(C2-Pad1)"
+        (wire
+          (path F.Cu 10000
+            1460500 -1041400
+            1442500 -1041400
+          )
+        )
+        (wire
+          (path F.Cu 10000
+            1442500 -1041400
+            1417100 -1016000
+            1384300 -1016000
+          )
+        )
+        (wire
+          (path F.Cu 10000
+            1532400 -1066800
+            1507000 -1041400
+            1460500 -1041400
+          )
+        )
+        (wire
+          (path B.Cu 10000
+            1460500 -1041400
+            1435100 -1066800
+            1435100 -1117600
+          )
+        )
+        (wire
+          (path F.Cu 10000
+            1549400 -1066800
+            1532400 -1066800
+          )
+        )
+      )
+      (net VCC
+        (wire
+          (path B.Cu 10000
+            1384300 -1066800
+            1402300 -1066800
+          )
+        )
+        (wire
+          (path B.Cu 10000
+            1402300 -1066800
+            1402300 -1048800
+            1460500 -990600
+          )
+        )
+        (wire
+          (path F.Cu 10000
+            1460500 -990600
+            1498600 -990600
+          )
+        )
+      )
+      (net "Net-(R1-Pad2)"
+        (wire
+          (path F.Cu 10000
+            1549400 -1016000
+            1549400 -1007600
+          )
+        )
+        (wire
+          (path F.Cu 10000
+            1460500 -1016000
+            1549400 -1016000
+          )
+        )
+        (wire
+          (path F.Cu 10000
+            1549400 -990600
+            1549400 -1007600
+          )
+        )
+      )
+    )
+  )
+)
