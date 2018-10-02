@@ -1,0 +1,13 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP Push
+D Push button 100MΩ Min. at 100VDC MAX 50mA 24VDC 250VAC for 1 minute
+F https://www.hdk.co.jp/pdf/eng/e291702.pdf
+$ENDCMP
+#
+$CMP ULN2003A
+D Array de transistores IMax=500mA VMax=50v
+F http://www.ti.com/lit/ds/symlink/uln2003a.pdf
+$ENDCMP
+#
+#End Doc Library
