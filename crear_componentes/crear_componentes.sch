@@ -40,34 +40,12 @@ NoConn ~ 4600 3700
 NoConn ~ 4600 3600
 NoConn ~ 4600 3500
 $Comp
-L power:GND #PWR05
-U 1 1 5BB27794
-P 5300 4100
-F 0 "#PWR05" H 5300 3850 50  0001 C CNN
-F 1 "GND" H 5305 3927 50  0000 C CNN
-F 2 "" H 5300 4100 50  0001 C CNN
-F 3 "" H 5300 4100 50  0001 C CNN
-	1    5300 4100
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR04
-U 1 1 5BB277E2
-P 4250 3950
-F 0 "#PWR04" H 4250 3800 50  0001 C CNN
-F 1 "+5V" H 4265 4123 50  0000 C CNN
-F 2 "" H 4250 3950 50  0001 C CNN
-F 3 "" H 4250 3950 50  0001 C CNN
-	1    4250 3950
-	1    0    0    -1  
-$EndComp
-$Comp
 L Switch:SW_Push SW1
 U 1 1 5BB278FB
 P 4100 3300
 F 0 "SW1" H 4100 3585 50  0000 C CNN
 F 1 "SW_Push" H 4100 3494 50  0000 C CNN
-F 2 "Button_Switch_SMD:SW_DIP_SPSTx01_Slide_Copal_CVS-01xB_W5.9mm_P1mm" H 4100 3500 50  0001 C CNN
+F 2 "Button_Switch_SMD:Panasonic_EVQPUK_EVQPUB" H 4100 3500 50  0001 C CNN
 F 3 "" H 4100 3500 50  0001 C CNN
 	1    4100 3300
 	1    0    0    -1  
@@ -102,14 +80,6 @@ Wire Wire Line
 	5200 3300 5250 3300
 Wire Wire Line
 	4300 3300 4600 3300
-Wire Wire Line
-	4600 4000 4250 4000
-Wire Wire Line
-	4250 4000 4250 3950
-Wire Wire Line
-	5200 4000 5300 4000
-Wire Wire Line
-	5300 4000 5300 4100
 $Comp
 L power:GND #PWR06
 U 1 1 5BB27AE8
@@ -137,7 +107,7 @@ Wire Wire Line
 Wire Wire Line
 	3750 3300 3900 3300
 Wire Wire Line
-	5600 3900 5600 3700
+	5600 3900 5600 3750
 $Comp
 L Connector:Conn_01x02_Female J1
 U 1 1 5BB27C78
@@ -172,11 +142,79 @@ F 3 "" H 3250 3750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3250 3750 3250 3650
-Wire Wire Line
-	3250 3650 3400 3650
-Wire Wire Line
 	3400 3550 3250 3550
 Wire Wire Line
 	3250 3550 3250 3500
+$Comp
+L Device:R R2
+U 1 1 5BB40262
+P 6150 3250
+F 0 "R2" H 6220 3296 50  0000 L CNN
+F 1 "R" H 6220 3205 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6080 3250 50  0001 C CNN
+F 3 "~" H 6150 3250 50  0001 C CNN
+	1    6150 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 3750 6150 3750
+Wire Wire Line
+	6150 3750 6150 3400
+Connection ~ 5600 3750
+Wire Wire Line
+	5600 3750 5600 3700
+$Comp
+L Device:LED D2
+U 1 1 5BB4041E
+P 5950 2700
+F 0 "D2" H 5941 2916 50  0000 C CNN
+F 1 "LED" H 5941 2825 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 5950 2700 50  0001 C CNN
+F 3 "~" H 5950 2700 50  0001 C CNN
+	1    5950 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 3100 6150 2700
+Wire Wire Line
+	6150 2700 6100 2700
+Connection ~ 3900 3300
+Wire Wire Line
+	3400 3650 3250 3650
+Wire Wire Line
+	3250 3650 3250 3750
+Wire Wire Line
+	5200 4000 5450 4000
+Wire Wire Line
+	5450 4000 5450 3750
+Wire Wire Line
+	5450 3750 5600 3750
+Wire Wire Line
+	4600 4000 4300 4000
+Wire Wire Line
+	4300 4000 4300 3450
+Wire Wire Line
+	4300 3450 3900 3450
+Wire Wire Line
+	3900 3450 3900 3300
+Wire Wire Line
+	5800 2700 5800 2250
+Wire Wire Line
+	3900 2250 3900 3300
+$Comp
+L mi_libreria:TopPush SW2
+U 1 1 5BB45A31
+P 5050 2250
+F 0 "SW2" H 5050 2535 50  0000 C CNN
+F 1 "TopPush" H 5050 2444 50  0000 C CNN
+F 2 "Mi_breria:TopPush" H 5050 2050 50  0001 C CNN
+F 3 "https://www.hdk.co.jp/pdf/eng/e291702.pdf" H 4984 2083 50  0001 C CNN
+F 4 "Top Push" H 5031 2113 50  0001 C CNN "Switch"
+	1    5050 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 2250 5250 2250
+Wire Wire Line
+	4850 2250 3900 2250
 $EndSCHEMATC

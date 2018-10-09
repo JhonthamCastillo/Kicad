@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Medidor_lata-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -36,7 +37,7 @@ F 3 "" H 4750 5900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4750 5350 4750 5900
+	4750 5350 4750 5600
 $Comp
 L power:+5V #PWR0102
 U 1 1 5BB18C09
@@ -49,72 +50,23 @@ F 3 "" H 4750 2100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4750 2350 4750 2100
-$Comp
-L Switch:SW_Push SW1
-U 1 1 5BB18C94
-P 6200 4150
-F 0 "SW1" H 6200 4435 50  0000 C CNN
-F 1 "SW_Push" H 6200 4344 50  0000 C CNN
-F 2 "Button_Switch_THT:Push_E-Switch_KS01Q01" H 6200 4350 50  0001 C CNN
-F 3 "" H 6200 4350 50  0001 C CNN
-	1    6200 4150
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0103
-U 1 1 5BB18D33
-P 6550 4400
-F 0 "#PWR0103" H 6550 4150 50  0001 C CNN
-F 1 "GND" H 6555 4227 50  0000 C CNN
-F 2 "" H 6550 4400 50  0001 C CNN
-F 3 "" H 6550 4400 50  0001 C CNN
-	1    6550 4400
-	1    0    0    -1  
-$EndComp
+	4750 2350 4750 2200
 $Comp
 L Device:R R1
 U 1 1 5BB18D69
 P 5750 3950
 F 0 "R1" H 5820 3996 50  0000 L CNN
 F 1 "R" H 5820 3905 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 5680 3950 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5680 3950 50  0001 C CNN
 F 3 "~" H 5750 3950 50  0001 C CNN
 	1    5750 3950
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+5V #PWR0104
-U 1 1 5BB18E3F
-P 5750 3500
-F 0 "#PWR0104" H 5750 3350 50  0001 C CNN
-F 1 "+5V" V 5765 3628 50  0000 L CNN
-F 2 "" H 5750 3500 50  0001 C CNN
-F 3 "" H 5750 3500 50  0001 C CNN
-	1    5750 3500
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5750 3500 5750 3800
 Wire Wire Line
 	5750 4100 5750 4150
 Wire Wire Line
-	5750 4150 6000 4150
-Wire Wire Line
 	5350 4150 5750 4150
-Connection ~ 5750 4150
-Wire Wire Line
-	6400 4150 6550 4150
-Wire Wire Line
-	6550 4150 6550 4400
-NoConn ~ 5350 5050
-NoConn ~ 5350 4950
-NoConn ~ 5350 4850
-NoConn ~ 5350 4750
 NoConn ~ 5350 4650
-NoConn ~ 5350 4550
-NoConn ~ 5350 4450
-NoConn ~ 5350 4350
 NoConn ~ 5350 4050
 NoConn ~ 5350 3950
 NoConn ~ 5350 3850
@@ -129,27 +81,15 @@ NoConn ~ 5350 2650
 NoConn ~ 4150 2650
 NoConn ~ 4150 2850
 NoConn ~ 4150 2950
-NoConn ~ 8100 3350
 $Comp
 L Connector:Conn_01x02_Female J1
 U 1 1 5BB193DD
 P 7750 3900
 F 0 "J1" H 7777 3876 50  0000 L CNN
 F 1 "Conn_01x02_Female" H 7777 3785 50  0000 L CNN
-F 2 "Connector_Hirose:Hirose_DF13-02P-1.25DS_1x02_P1.25mm_Horizontal" H 7750 3900 50  0001 C CNN
+F 2 "Connector_JST:JST_EH_B02B-EH-A_1x02_P2.50mm_Vertical" H 7750 3900 50  0001 C CNN
 F 3 "~" H 7750 3900 50  0001 C CNN
 	1    7750 3900
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR02
-U 1 1 5BB194A2
-P 7400 4300
-F 0 "#PWR02" H 7400 4050 50  0001 C CNN
-F 1 "GND" H 7405 4127 50  0000 C CNN
-F 2 "" H 7400 4300 50  0001 C CNN
-F 3 "" H 7400 4300 50  0001 C CNN
-	1    7400 4300
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -164,13 +104,11 @@ F 3 "" H 7400 3650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7400 3650 7400 3900
+	7400 3650 7400 3700
 Wire Wire Line
 	7400 3900 7550 3900
 Wire Wire Line
 	7550 4000 7400 4000
-Wire Wire Line
-	7400 4000 7400 4300
 $Comp
 L Device:Crystal Y1
 U 1 1 5BB199C3
@@ -201,7 +139,7 @@ U 1 1 5BB19F93
 P 6650 2800
 F 0 "C1" V 6398 2800 50  0000 C CNN
 F 1 "C" V 6489 2800 50  0000 C CNN
-F 2 "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 6688 2650 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 6688 2650 50  0001 C CNN
 F 3 "~" H 6650 2800 50  0001 C CNN
 	1    6650 2800
 	0    1    1    0   
@@ -212,7 +150,7 @@ U 1 1 5BB1A044
 P 6650 3400
 F 0 "C2" V 6398 3400 50  0000 C CNN
 F 1 "C" V 6489 3400 50  0000 C CNN
-F 2 "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 6688 3250 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 6688 3250 50  0001 C CNN
 F 3 "~" H 6650 3400 50  0001 C CNN
 	1    6650 3400
 	0    1    1    0   
@@ -251,4 +189,344 @@ Wire Wire Line
 Connection ~ 6950 3100
 Wire Wire Line
 	6950 3100 6950 3400
+$Comp
+L Device:LED D1
+U 1 1 5BB392D1
+P 6450 5050
+F 0 "D1" H 6442 4795 50  0000 C CNN
+F 1 "LED" H 6442 4886 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 6450 5050 50  0001 C CNN
+F 3 "~" H 6450 5050 50  0001 C CNN
+	1    6450 5050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5BB3995D
+P 5850 5050
+F 0 "R2" V 5643 5050 50  0000 C CNN
+F 1 "R" V 5734 5050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5780 5050 50  0001 C CNN
+F 3 "~" H 5850 5050 50  0001 C CNN
+	1    5850 5050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5700 5050 5350 5050
+Wire Wire Line
+	6300 5050 6000 5050
+Wire Wire Line
+	6600 5050 6950 5050
+$Comp
+L Switch:Pulsador Sw1
+U 1 1 5BB4237C
+P 6350 4150
+F 0 "Sw1" H 6350 4433 50  0000 C CNN
+F 1 "Pulsador" H 6350 4342 50  0000 C CNN
+F 2 "Button_Switch_Keyboard:Pulsador" H 6250 3940 50  0001 C CNN
+F 3 "https://www.hdk.co.jp/pdf/eng/e291702.pdf" H 6350 4040 50  0001 C CNN
+F 4 "TOPPUSH6mmx6mm" H 6334 4011 50  0001 C CNN "Pulsador"
+	1    6350 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 4150 6550 4150
+Wire Wire Line
+	6150 4150 5750 4150
+Connection ~ 5750 4150
+$Comp
+L Switch:Pulsador Sw3
+U 1 1 5BB4317C
+P 9000 4400
+F 0 "Sw3" H 9000 4683 50  0000 C CNN
+F 1 "Pulsador" H 9000 4592 50  0000 C CNN
+F 2 "Button_Switch_Keyboard:Pulsador" H 8900 4190 50  0001 C CNN
+F 3 "https://www.hdk.co.jp/pdf/eng/e291702.pdf" H 9000 4290 50  0001 C CNN
+F 4 "TOPPUSH6mmx6mm" H 8984 4261 50  0001 C CNN "Pulsador"
+	1    9000 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:Pulsador Sw4
+U 1 1 5BB4322F
+P 1400 2600
+F 0 "Sw4" H 1400 2883 50  0000 C CNN
+F 1 "Pulsador" H 1400 2792 50  0000 C CNN
+F 2 "Button_Switch_Keyboard:Pulsador" H 1300 2390 50  0001 C CNN
+F 3 "https://www.hdk.co.jp/pdf/eng/e291702.pdf" H 1400 2490 50  0001 C CNN
+F 4 "TOPPUSH6mmx6mm" H 1384 2461 50  0001 C CNN "Pulsador"
+	1    1400 2600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Switch:Pulsador Sw2
+U 1 1 5BB432A6
+P 9000 4000
+F 0 "Sw2" H 9000 4283 50  0000 C CNN
+F 1 "Pulsador" H 9000 4192 50  0000 C CNN
+F 2 "Button_Switch_Keyboard:Pulsador" H 8900 3790 50  0001 C CNN
+F 3 "https://www.hdk.co.jp/pdf/eng/e291702.pdf" H 9000 3890 50  0001 C CNN
+F 4 "TOPPUSH6mmx6mm" H 8984 3861 50  0001 C CNN "Pulsador"
+	1    9000 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 5050 6950 5600
+Wire Wire Line
+	6950 5600 4750 5600
+Connection ~ 6950 5050
+Connection ~ 4750 5600
+Wire Wire Line
+	4750 5600 4750 5900
+Wire Wire Line
+	6950 4150 7400 4150
+Wire Wire Line
+	7400 4150 7400 4000
+Connection ~ 6950 4150
+Wire Wire Line
+	5750 3800 5750 3700
+Wire Wire Line
+	5750 3700 7400 3700
+Connection ~ 7400 3700
+Wire Wire Line
+	7400 3700 7400 3900
+Wire Wire Line
+	6950 4150 6950 5050
+Wire Wire Line
+	5350 4450 8250 4450
+Wire Wire Line
+	8250 4450 8250 4000
+Wire Wire Line
+	8250 4000 8800 4000
+Wire Wire Line
+	5350 4550 8350 4550
+Wire Wire Line
+	8350 4550 8350 4400
+Wire Wire Line
+	8350 4400 8800 4400
+NoConn ~ 5350 4350
+$Comp
+L Device:R R3
+U 1 1 5BB49573
+P 8100 3300
+F 0 "R3" V 7893 3300 50  0000 C CNN
+F 1 "R" V 7984 3300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 8030 3300 50  0001 C CNN
+F 3 "~" H 8100 3300 50  0001 C CNN
+	1    8100 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 5BB4962F
+P 8600 3300
+F 0 "D2" H 8592 3045 50  0000 C CNN
+F 1 "LED" H 8592 3136 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 8600 3300 50  0001 C CNN
+F 3 "~" H 8600 3300 50  0001 C CNN
+	1    8600 3300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9200 4000 9450 4000
+Wire Wire Line
+	9450 4000 9450 4400
+Wire Wire Line
+	9200 4400 9450 4400
+Connection ~ 9450 4400
+Wire Wire Line
+	6950 5600 9450 5600
+Connection ~ 6950 5600
+Wire Wire Line
+	8250 3300 8450 3300
+Wire Wire Line
+	8750 3300 9450 3300
+Wire Wire Line
+	9450 3300 9450 4000
+Connection ~ 9450 4000
+Wire Wire Line
+	7950 3300 7700 3300
+Wire Wire Line
+	7700 3300 7700 3700
+Wire Wire Line
+	7700 3700 7400 3700
+NoConn ~ 5350 4850
+NoConn ~ 5350 4950
+$Comp
+L Transistor_BJT:BC847 Q3
+U 1 1 5BB60E98
+P 2300 3700
+F 0 "Q3" H 2491 3746 50  0000 L CNN
+F 1 "BC847" H 2491 3655 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2500 3625 50  0001 L CIN
+F 3 "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657" H 2300 3700 50  0001 L CNN
+	1    2300 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5BB60F3B
+P 1900 2450
+F 0 "R6" H 1970 2496 50  0000 L CNN
+F 1 "R" H 1970 2405 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1830 2450 50  0001 C CNN
+F 3 "~" H 1900 2450 50  0001 C CNN
+	1    1900 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5BB60FBA
+P 1400 3300
+F 0 "R5" H 1470 3346 50  0000 L CNN
+F 1 "R" H 1470 3255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1330 3300 50  0001 C CNN
+F 3 "~" H 1400 3300 50  0001 C CNN
+	1    1400 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5BB6106B
+P 1900 3800
+F 0 "R7" H 1970 3846 50  0000 L CNN
+F 1 "R" H 1970 3755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1830 3800 50  0001 C CNN
+F 3 "~" H 1900 3800 50  0001 C CNN
+	1    1900 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5BB61110
+P 2800 3250
+F 0 "R8" H 2870 3296 50  0000 L CNN
+F 1 "R" H 2870 3205 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2730 3250 50  0001 C CNN
+F 3 "~" H 2800 3250 50  0001 C CNN
+	1    2800 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC856 Q2
+U 1 1 5BB612AC
+P 2000 3350
+F 0 "Q2" H 2190 3304 50  0000 L CNN
+F 1 "BC856" H 2190 3395 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2200 3275 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC856.pdf" H 2000 3350 50  0001 L CNN
+	1    2000 3350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2400 3500 2400 3400
+Wire Wire Line
+	2400 3350 2200 3350
+Wire Wire Line
+	1900 3550 1900 3600
+Wire Wire Line
+	1900 3950 1900 4050
+Wire Wire Line
+	1900 4050 2400 4050
+Wire Wire Line
+	2400 4050 2400 3900
+Wire Wire Line
+	2800 3400 2400 3400
+Connection ~ 2400 3400
+Wire Wire Line
+	2400 3400 2400 3350
+Wire Wire Line
+	2800 2200 1900 2200
+Wire Wire Line
+	1900 2200 1900 2300
+Wire Wire Line
+	2800 2200 2800 3100
+Wire Wire Line
+	9450 4400 9450 5600
+Wire Wire Line
+	1400 2800 1400 3150
+Wire Wire Line
+	1400 2400 1400 2200
+Wire Wire Line
+	1400 2200 1900 2200
+Connection ~ 1900 2200
+Wire Wire Line
+	1400 3450 1400 3600
+Wire Wire Line
+	1400 3600 1900 3600
+Connection ~ 1900 3600
+Wire Wire Line
+	1900 3600 1900 3650
+$Comp
+L Transistor_BJT:BC847 Q1
+U 1 1 5BB7EEC5
+P 1300 3850
+F 0 "Q1" H 1491 3896 50  0000 L CNN
+F 1 "BC847" H 1491 3805 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1500 3775 50  0001 L CIN
+F 3 "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657" H 1300 3850 50  0001 L CNN
+	1    1300 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 3650 1400 3600
+Connection ~ 1400 3600
+Wire Wire Line
+	1900 4050 1400 4050
+Connection ~ 1900 4050
+$Comp
+L Device:R R4
+U 1 1 5BB829C3
+P 1100 4100
+F 0 "R4" H 1170 4146 50  0000 L CNN
+F 1 "R" H 1170 4055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1030 4100 50  0001 C CNN
+F 3 "~" H 1100 4100 50  0001 C CNN
+	1    1100 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 3850 1100 3950
+Wire Wire Line
+	5350 4750 5500 4750
+Wire Wire Line
+	5500 4750 5500 5800
+Wire Wire Line
+	5500 5800 2150 5800
+Wire Wire Line
+	2150 5800 2150 4350
+Wire Wire Line
+	2150 4350 1100 4350
+Wire Wire Line
+	1100 4350 1100 4250
+Wire Wire Line
+	2100 3700 2100 3600
+Wire Wire Line
+	2100 3600 1900 3600
+Wire Wire Line
+	4750 5600 2400 5600
+Wire Wire Line
+	2400 5600 2400 4050
+Connection ~ 2400 4050
+Wire Wire Line
+	2800 2200 4750 2200
+Connection ~ 2800 2200
+Connection ~ 4750 2200
+Wire Wire Line
+	4750 2200 4750 2100
+$Comp
+L Isolator:PC817 U2
+U 1 1 5BB8F9C5
+P 2200 2900
+F 0 "U2" H 2200 3225 50  0000 C CNN
+F 1 "PC817" H 2200 3134 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 2000 2700 50  0001 L CIN
+F 3 "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf" H 2200 2900 50  0001 L CNN
+	1    2200 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 2800 1900 2600
+Wire Wire Line
+	1900 3000 1900 3150
 $EndSCHEMATC

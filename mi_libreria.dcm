@@ -1,6 +1,6 @@
 EESchema-DOCLIB  Version 2.0
 #
-$CMP Push
+$CMP TopPush
 D Push button 100MΩ Min. at 100VDC MAX 50mA 24VDC 250VAC for 1 minute
 F https://www.hdk.co.jp/pdf/eng/e291702.pdf
 $ENDCMP

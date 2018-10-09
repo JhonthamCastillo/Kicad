@@ -1,0 +1,368 @@
+EESchema Schematic File Version 4
+LIBS:Medidor_V1.2-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Display_Character:CC56-12EWA U1
+U 1 1 5BBA6414
+P 6300 2900
+F 0 "U1" H 6300 3567 50  0000 C CNN
+F 1 "CC56-12EWA" H 6300 3476 50  0000 C CNN
+F 2 "Display_7Segment:7segdisp8.0in4Dig" H 6300 2300 50  0001 C CNN
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/CA56-12EWA.pdf" H 5870 2930 50  0001 C CNN
+	1    6300 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5BBA65A1
+P 4500 2600
+F 0 "R1" V 4293 2600 50  0000 C CNN
+F 1 "R" V 4384 2600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4430 2600 50  0001 C CNN
+F 3 "~" H 4500 2600 50  0001 C CNN
+	1    4500 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5BBA6632
+P 4500 2900
+F 0 "R2" V 4293 2900 50  0000 C CNN
+F 1 "R" V 4384 2900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4430 2900 50  0001 C CNN
+F 3 "~" H 4500 2900 50  0001 C CNN
+	1    4500 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5BBA6682
+P 4500 3200
+F 0 "R3" V 4293 3200 50  0000 C CNN
+F 1 "R" V 4384 3200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4430 3200 50  0001 C CNN
+F 3 "~" H 4500 3200 50  0001 C CNN
+	1    4500 3200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5BBA66AE
+P 4500 3500
+F 0 "R4" V 4293 3500 50  0000 C CNN
+F 1 "R" V 4384 3500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4430 3500 50  0001 C CNN
+F 3 "~" H 4500 3500 50  0001 C CNN
+	1    4500 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5BBA6760
+P 4500 3800
+F 0 "R5" V 4293 3800 50  0000 C CNN
+F 1 "R" V 4384 3800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4430 3800 50  0001 C CNN
+F 3 "~" H 4500 3800 50  0001 C CNN
+	1    4500 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5BBA67C5
+P 4500 4100
+F 0 "R6" V 4293 4100 50  0000 C CNN
+F 1 "R" V 4384 4100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4430 4100 50  0001 C CNN
+F 3 "~" H 4500 4100 50  0001 C CNN
+	1    4500 4100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5BBA6863
+P 4500 4400
+F 0 "R7" V 4293 4400 50  0000 C CNN
+F 1 "R" V 4384 4400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4430 4400 50  0001 C CNN
+F 3 "~" H 4500 4400 50  0001 C CNN
+	1    4500 4400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5BBA68D3
+P 4500 4700
+F 0 "R8" V 4293 4700 50  0000 C CNN
+F 1 "R" V 4384 4700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4430 4700 50  0001 C CNN
+F 3 "~" H 4500 4700 50  0001 C CNN
+	1    4500 4700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4650 4700 5100 4700
+Wire Wire Line
+	5100 4700 5100 3300
+Wire Wire Line
+	5100 3300 5200 3300
+Wire Wire Line
+	5200 3200 5050 3200
+Wire Wire Line
+	5050 3200 5050 4400
+Wire Wire Line
+	5050 4400 4650 4400
+Wire Wire Line
+	4650 4100 5000 4100
+Wire Wire Line
+	5000 4100 5000 3100
+Wire Wire Line
+	5000 3100 5200 3100
+Wire Wire Line
+	5200 3000 4950 3000
+Wire Wire Line
+	4950 3000 4950 3800
+Wire Wire Line
+	4950 3800 4650 3800
+Wire Wire Line
+	4650 3500 4900 3500
+Wire Wire Line
+	4900 3500 4900 2900
+Wire Wire Line
+	4900 2900 5200 2900
+Wire Wire Line
+	5200 2800 4850 2800
+Wire Wire Line
+	4850 2800 4850 3200
+Wire Wire Line
+	4850 3200 4650 3200
+Wire Wire Line
+	4650 2900 4800 2900
+Wire Wire Line
+	4800 2900 4800 2700
+Wire Wire Line
+	4800 2700 5200 2700
+Wire Wire Line
+	5200 2600 4650 2600
+$Comp
+L MCU_Microchip_ATmega:ATmega328-AU U2
+U 1 1 5BBA783F
+P 2750 3950
+F 0 "U2" H 2750 2364 50  0000 C CNN
+F 1 "ATmega328-AU" H 2750 2273 50  0000 C CNN
+F 2 "Package_QFP:TQFP-32_7x7mm_P0.8mm" H 2750 3950 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 2750 3950 50  0001 C CNN
+	1    2750 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 4700 4200 4700
+Wire Wire Line
+	4200 4700 4200 5150
+Wire Wire Line
+	4200 5150 3350 5150
+Wire Wire Line
+	3350 5050 4150 5050
+Wire Wire Line
+	4150 5050 4150 4400
+Wire Wire Line
+	4150 4400 4350 4400
+Wire Wire Line
+	4350 4100 4100 4100
+Wire Wire Line
+	4100 4100 4100 4950
+Wire Wire Line
+	4100 4950 3350 4950
+Wire Wire Line
+	3350 4850 4050 4850
+Wire Wire Line
+	4050 4850 4050 3800
+Wire Wire Line
+	4050 3800 4350 3800
+Wire Wire Line
+	3350 4750 4000 4750
+Wire Wire Line
+	4000 4750 4000 3500
+Wire Wire Line
+	4000 3500 4350 3500
+Wire Wire Line
+	3350 4650 3950 4650
+Wire Wire Line
+	3950 4650 3950 3200
+Wire Wire Line
+	3950 3200 4350 3200
+Wire Wire Line
+	3350 4550 3900 4550
+Wire Wire Line
+	3900 4550 3900 2900
+Wire Wire Line
+	3900 2900 4350 2900
+Wire Wire Line
+	4350 2600 3850 2600
+Wire Wire Line
+	3850 2600 3850 4450
+Wire Wire Line
+	3850 4450 3350 4450
+Wire Wire Line
+	7400 3000 7400 2200
+Wire Wire Line
+	7400 2200 3450 2200
+Wire Wire Line
+	3450 2200 3450 2750
+Wire Wire Line
+	3450 2750 3350 2750
+Wire Wire Line
+	3350 2850 3500 2850
+Wire Wire Line
+	3500 2850 3500 2150
+Wire Wire Line
+	3500 2150 7450 2150
+Wire Wire Line
+	7450 2150 7450 3100
+Wire Wire Line
+	7450 3100 7400 3100
+Wire Wire Line
+	7400 3200 7500 3200
+Wire Wire Line
+	7500 3200 7500 2100
+Wire Wire Line
+	7500 2100 3550 2100
+Wire Wire Line
+	3550 2100 3550 2950
+Wire Wire Line
+	3550 2950 3350 2950
+Wire Wire Line
+	3350 3050 3600 3050
+Wire Wire Line
+	3600 3050 3600 2050
+Wire Wire Line
+	3600 2050 7550 2050
+Wire Wire Line
+	7550 2050 7550 3300
+Wire Wire Line
+	7550 3300 7400 3300
+$Comp
+L power:+5V #PWR01
+U 1 1 5BBB06E8
+P 2750 2150
+F 0 "#PWR01" H 2750 2000 50  0001 C CNN
+F 1 "+5V" H 2765 2323 50  0000 C CNN
+F 2 "" H 2750 2150 50  0001 C CNN
+F 3 "" H 2750 2150 50  0001 C CNN
+	1    2750 2150
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2850 2450
+NoConn ~ 3350 3150
+NoConn ~ 3350 3250
+NoConn ~ 3350 3350
+NoConn ~ 3350 3450
+NoConn ~ 2150 2950
+NoConn ~ 2150 3050
+NoConn ~ 2150 2750
+NoConn ~ 3350 3650
+NoConn ~ 3350 3750
+NoConn ~ 3350 3850
+NoConn ~ 3350 3950
+NoConn ~ 3350 4050
+NoConn ~ 3350 4150
+$Comp
+L power:GND #PWR02
+U 1 1 5BBC4BA2
+P 2750 5800
+F 0 "#PWR02" H 2750 5550 50  0001 C CNN
+F 1 "GND" H 2755 5627 50  0000 C CNN
+F 2 "" H 2750 5800 50  0001 C CNN
+F 3 "" H 2750 5800 50  0001 C CNN
+	1    2750 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 5450 2750 5700
+$Comp
+L Device:R R9
+U 1 1 5BBC6560
+P 3550 3950
+F 0 "R9" H 3620 3996 50  0000 L CNN
+F 1 "R" H 3620 3905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3480 3950 50  0001 C CNN
+F 3 "~" H 3550 3950 50  0001 C CNN
+	1    3550 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:Pulsador Sw1
+U 1 1 5BBC65FD
+P 3550 4350
+F 0 "Sw1" H 3550 4633 50  0000 C CNN
+F 1 "Pulsador" H 3550 4542 50  0000 C CNN
+F 2 "Button_Switch_Keyboard:Pulsador" H 3450 4140 50  0001 C CNN
+F 3 "https://www.hdk.co.jp/pdf/eng/e291702.pdf" H 3550 4240 50  0001 C CNN
+F 4 "TOPPUSH6mmx6mm" H 3534 4211 50  0001 C CNN "Pulsador"
+	1    3550 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 4350 3750 5700
+Wire Wire Line
+	3750 5700 2750 5700
+Connection ~ 2750 5700
+Wire Wire Line
+	2750 5700 2750 5800
+Wire Wire Line
+	3350 4350 3350 4250
+Wire Wire Line
+	3550 4100 3550 4150
+Wire Wire Line
+	3550 4150 3400 4150
+Wire Wire Line
+	3400 4150 3400 4250
+Wire Wire Line
+	3400 4250 3350 4250
+Connection ~ 3350 4250
+Wire Wire Line
+	3550 3800 3550 3150
+Wire Wire Line
+	3550 3150 3750 3150
+Wire Wire Line
+	3750 3150 3750 2300
+Wire Wire Line
+	3750 2300 2750 2300
+Wire Wire Line
+	2750 2300 2750 2450
+Wire Wire Line
+	2750 2150 2750 2300
+Connection ~ 2750 2300
+$Comp
+L Connector:Conn_01x02_Female J1
+U 1 1 5BBD0B62
+P 1350 3300
+F 0 "J1" H 1244 2975 50  0000 C CNN
+F 1 "Conn_01x02_Female" H 1244 3066 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_B02B-EH-A_1x02_P2.50mm_Vertical" H 1350 3300 50  0001 C CNN
+F 3 "~" H 1350 3300 50  0001 C CNN
+	1    1350 3300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1550 3200 1550 2300
+Wire Wire Line
+	1550 2300 2750 2300
+Wire Wire Line
+	1550 3300 1550 5700
+Wire Wire Line
+	1550 5700 2750 5700
+$EndSCHEMATC
