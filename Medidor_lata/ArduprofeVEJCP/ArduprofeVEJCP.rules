@@ -11,7 +11,7 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 6372)
+    (start_pass_no 5826)
     (layer_rule F.Cu
       (active on)
       (preferred_direction horizontal)
@@ -165,15 +165,8 @@
     )
   )
   (class "kicad_default"
-    IOREF RST +3V3 AREF VIN NC "Net-(JP3-Pad1)" DT
-    C TX CH RS 3V3 RX IO0 IO2
-    TX1 RX1 VCC+ "VCC-" "Net-(RV1-Pad1)" "Net-(J2-Pad1)" "Net-(MOD3-Pad6)" "Net-(MOD3-Pad1)"
-    "Net-(U7-Pad5)" "Net-(U7-Pad4)" "Net-(U8-Pad8)" XT1 XT2 "V-" "Net-(R20-Pad1)" V+
-    OF2 OF1 "Net-(U6-Pad8)" GND3 VC+ RS1 TX2 RX2
-    ARF INS OUTS "Net-(U3-Pad19)" "Net-(U3-Pad22)" /LED /QE /RL
-    /QB /RNC /RNA /C3 /C4 /INA /OUTA /RPT
-    /OF1 /OF2 /J412V /SAL /M+ /Q2E /Q2B /SSAL
-    /RV1 /C8 /R18
+    "Net-(JP3-Pad1)" "Net-(RV1-Pad1)" "Net-(J2-Pad1)" "Net-(MOD3-Pad6)" "Net-(MOD3-Pad1)" "Net-(U7-Pad5)" "Net-(U7-Pad4)" "Net-(U8-Pad8)"
+    "Net-(U6-Pad8)"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule
@@ -184,9 +177,12 @@
     )
   )
   (class C03
-    SDA SCL AN0 "-3" 4 "-5" "-6" 7
-    8 AN5 AN4 AN3 AN2 AN1 "-9" "-10"
-    "-11" 12 13 2
+    RST AREF DT CH RS 3V3 IO0 IO2
+    SDA SCL TX1 RX1 XT1 XT2 AN0 "V-"
+    V+ OF2 OF1 GND3 VC+ RS1 "-3" 4
+    "-5" "-6" 7 8 AN5 AN4 AN3 AN2
+    AN1 "-9" "-10" "-11" 12 13 TX2 RX2
+    2 ARF INS OUTS AD7 AD6 /Micro328U/PV
     (clearance_class C03)
     (via_rule C03)
     (rule
@@ -199,7 +195,8 @@
   (class C04
     D2 PWM3 D4 PWM5 PWM6 D7 AIN0 AIN1
     AIN2 AIN3 D8 PWM9 PWM10 PWM11 D12 D13
-    /L9 /L11 /L10 /L13 /L12 /LDR /LON
+    VIN TX RX /L9 /L11 /L10 /L13 /L12
+    /RL /LDR /LON /C3 /C4
     (clearance_class C04)
     (via_rule C04)
     (rule
@@ -210,6 +207,7 @@
     )
   )
   (class C06
+    IOREF NC
     (clearance_class C06)
     (via_rule C06)
     (rule
@@ -220,6 +218,8 @@
     )
   )
   (class C08
+    +3V3 /QE /QB /INA /OUTA /RPT /OF1 /OF2
+    /SAL /M+ /Q2E /Q2B /SSAL /RV1 /C8 /R18
     (clearance_class C08)
     (via_rule C08)
     (rule
@@ -230,8 +230,8 @@
     )
   )
   (class C12
-    GND +5V +S Reg PR GND1 GND2 /M15
-    /M16 /M29 /M210
+    GND +5V +S Reg PR VCC+ "VCC-" GND1
+    GND2 /LED /M15 /M16 /M29 /M210 /J412V
     (clearance_class C12)
     (via_rule C12)
     (rule
@@ -242,7 +242,7 @@
     )
   )
   (class C16
-    "-30V" +30V
+    C "-30V" +30V /RNC /RNA
     (clearance_class C16)
     (via_rule C16)
     (rule

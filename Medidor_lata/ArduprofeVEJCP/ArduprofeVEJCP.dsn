@@ -33,6 +33,10 @@
     )
   )
   (placement
+    (component Socket:arduino_pin_socket_2
+      (place J13 61772.8 -77851 front 270 (PN Conn_01x02_Female))
+      (place J4 31216.6 -88214.2 front 0 (PN 12V))
+    )
     (component Package_TO_SOT_THT:TRANSISTOR_TO_92ME
       (place Q1 22733 -27025.6 front 0 (PN 2222A))
       (place Q2 4546.6 -73075.8 front 180 (PN 2222A))
@@ -48,9 +52,6 @@
     )
     (component Socket:MIC
       (place M1 37973 -85547.2 front 270 (PN MIC))
-    )
-    (component Socket:arduino_pin_socket_2
-      (place J4 31216.6 -88214.2 front 0 (PN 12V))
     )
     (component Button_Switch_Keyboard:Pulsador
       (place Sw1 79044.8 -35128.2 front 180 (PN RESET))
@@ -197,20 +198,20 @@
     )
     (component Capacitor_SMD:C_0805_2012Metric
       (place C6 53746.4 -74371.2 front 180 (PN 22p))
-      (place R20 48310.8 -77165.2 front 90 (PN 1.5K))
+      (place R20 46482 -77038.2 front 90 (PN 1.5K))
     )
     (component "Crystal:Crystal_SMD_HC49-SD"
       (place Y2 53390.8 -76657.2 back 0 (PN XL))
     )
     (component "Package_QFP:TQFP-32_7x7mm_P0.8mm"
-      (place U3 55930.8 -81229.2 front 270 (PN "ATmega328-AU"))
+      (place U3 53594 -81051.4 front 270 (PN "ATmega328-AU"))
     )
     (component "Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.35x2.35mm"
-      (place U6 57802.8 -82753.2 back 180 (PN TL081))
+      (place U6 57912 -83439 back 180 (PN TL081))
     )
     (component Resistor_SMD:R_0805_2012Metric
       (place R14 60502.8 -74117.2 front 0 (PN 1K))
-      (place R15 48310.8 -81788 front 90 (PN 1K))
+      (place R15 62941.2 -83058 back 270 (PN 1K))
       (place C7 49631.6 -74422 front 180 (PN 22p))
     )
     (component Potentiometer_SMD:Potentiometer_Bourns_3224W_Vertical
@@ -218,6 +219,14 @@
     )
   )
   (library
+    (image Socket:arduino_pin_socket_2
+      (outline (path signal 160  -2540 -1270  -2540 1270))
+      (outline (path signal 160  2540 -1270  -2540 -1270))
+      (outline (path signal 160  2540 1270  2540 -1270))
+      (outline (path signal 160  -2540 1270  2540 1270))
+      (pin Round[A]Pad_1600_um 1 1270 0)
+      (pin Round[A]Pad_1600_um 2 -1270 0)
+    )
     (image Package_TO_SOT_THT:TRANSISTOR_TO_92ME
       (outline (path signal 50  -2475 1800  2475 1800))
       (outline (path signal 50  2475 1800  2475 280))
@@ -262,14 +271,6 @@
             3200.98 2227.95  3583.93 1537.99  3820.17 785.064  3900 0))
       (pin Round[A]Pad_2200_um (rotate 90) 1 2540 0)
       (pin Round[A]Pad_2200_um (rotate 90) 2 -2540 0)
-    )
-    (image Socket:arduino_pin_socket_2
-      (outline (path signal 160  -2540 -1270  -2540 1270))
-      (outline (path signal 160  2540 -1270  -2540 -1270))
-      (outline (path signal 160  2540 1270  2540 -1270))
-      (outline (path signal 160  -2540 1270  2540 1270))
-      (pin Round[A]Pad_1600_um 1 1270 0)
-      (pin Round[A]Pad_1600_um 2 -1270 0)
     )
     (image Button_Switch_Keyboard:Pulsador
       (outline (path signal 200  -3360 -3360  -3360 3360))
@@ -1815,9 +1816,6 @@
     (net "V-"
       (pins J9-1 U6-4 R20-2)
     )
-    (net "Net-(R20-Pad1)"
-      (pins R20-1 RV2-2)
-    )
     (net V+
       (pins J9-3 U6-7)
     )
@@ -1900,16 +1898,10 @@
       (pins J10-2 U3-20)
     )
     (net INS
-      (pins J10-4 U6-2 R15-2)
+      (pins J13-2 U6-2 R15-2)
     )
     (net OUTS
-      (pins J10-3 U6-6 R15-1)
-    )
-    (net "Net-(U3-Pad19)"
-      (pins U3-19)
-    )
-    (net "Net-(U3-Pad22)"
-      (pins U3-22)
+      (pins J13-1 U6-6 R15-1)
     )
     (net /LED
       (pins JP5-1 D3-1 D4-1 D5-1 D6-1 D7-1)
@@ -2010,13 +2002,18 @@
     (net /R18
       (pins U7-7 R18-1)
     )
-    (class kicad_default "" +3V3 /C3 /C4 /C8 /INA /J412V /LED /M+ /OF1 /OF2
-      /OUTA /Q2B /Q2E /QB /QE /R18 /RL /RNA /RNC /RPT /RV1 /SAL /SSAL 3V3
-      AREF ARF C CH DT GND3 INS IO0 IO2 IOREF NC "Net-(J2-Pad1)" "Net-(JP3-Pad1)"
-      "Net-(MOD3-Pad1)" "Net-(MOD3-Pad6)" "Net-(R20-Pad1)" "Net-(RV1-Pad1)"
-      "Net-(U3-Pad19)" "Net-(U3-Pad22)" "Net-(U6-Pad8)" "Net-(U7-Pad4)" "Net-(U7-Pad5)"
-      "Net-(U8-Pad8)" OF1 OF2 OUTS RS RS1 RST RX RX1 RX2 TX TX1 TX2 V+ "V-"
-      VC+ VCC+ "VCC-" VIN XT1 XT2
+    (net AD7
+      (pins J10-4 U3-22)
+    )
+    (net AD6
+      (pins J10-3 U3-19)
+    )
+    (net /Micro328U/PV
+      (pins R20-1 RV2-2)
+    )
+    (class kicad_default "" "Net-(J2-Pad1)" "Net-(JP3-Pad1)" "Net-(MOD3-Pad1)"
+      "Net-(MOD3-Pad6)" "Net-(RV1-Pad1)" "Net-(U6-Pad8)" "Net-(U7-Pad4)" "Net-(U7-Pad5)"
+      "Net-(U8-Pad8)"
       (circuit
         (use_via Via[0-1]_800:400_um)
       )
@@ -2025,8 +2022,9 @@
         (clearance 200.1)
       )
     )
-    (class C03 -10 -11 -3 -5 -6 -9 12 13 2 4 7 8 AN0 AN1 AN2 AN3 AN4 AN5 SCL
-      SDA
+    (class C03 -10 -11 -3 -5 -6 -9 /Micro328U/PV 12 13 2 3V3 4 7 8 AD6 AD7
+      AN0 AN1 AN2 AN3 AN4 AN5 AREF ARF CH DT GND3 INS IO0 IO2 OF1 OF2 OUTS
+      RS RS1 RST RX1 RX2 SCL SDA TX1 TX2 V+ "V-" VC+ XT1 XT2
       (circuit
         (use_via Via[0-1]_800:400_um)
       )
@@ -2035,8 +2033,8 @@
         (clearance 200.1)
       )
     )
-    (class C04 /L10 /L11 /L12 /L13 /L9 /LDR /LON AIN0 AIN1 AIN2 AIN3 D12 D13
-      D2 D4 D7 D8 PWM10 PWM11 PWM3 PWM5 PWM6 PWM9
+    (class C04 /C3 /C4 /L10 /L11 /L12 /L13 /L9 /LDR /LON /RL AIN0 AIN1 AIN2
+      AIN3 D12 D13 D2 D4 D7 D8 PWM10 PWM11 PWM3 PWM5 PWM6 PWM9 RX TX VIN
       (circuit
         (use_via Via[0-1]_800:400_um)
       )
@@ -2045,7 +2043,7 @@
         (clearance 200.1)
       )
     )
-    (class C06
+    (class C06 IOREF NC
       (circuit
         (use_via Via[0-1]_800:400_um)
       )
@@ -2054,7 +2052,8 @@
         (clearance 200.1)
       )
     )
-    (class C08
+    (class C08 +3V3 /C8 /INA /M+ /OF1 /OF2 /OUTA /Q2B /Q2E /QB /QE /R18 /RPT
+      /RV1 /SAL /SSAL
       (circuit
         (use_via Via[0-1]_800:400_um)
       )
@@ -2063,7 +2062,8 @@
         (clearance 200.1)
       )
     )
-    (class C12 +5V +S /M15 /M16 /M210 /M29 GND GND1 GND2 PR Reg
+    (class C12 +5V +S /J412V /LED /M15 /M16 /M210 /M29 GND GND1 GND2 PR Reg
+      VCC+ "VCC-"
       (circuit
         (use_via Via[0-1]_1000:600_um)
       )
@@ -2072,7 +2072,7 @@
         (clearance 200.1)
       )
     )
-    (class C16 +30V -30V
+    (class C16 +30V -30V /RNA /RNC C
       (circuit
         (use_via Via[0-1]_1200:800_um)
       )
